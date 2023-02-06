@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:ital,wght@1,900&family=Poppins:ital,wght@0,200;0,300;0,700;1,200;1,300;1,400;1,500;1,600&family=Sacramento&family=Supermercado+One&family=Yellowtail&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:  lightcyan;
+}
+
+
+
+nav{
+        color: #ffffff;
+    }  
+
+/* nav ul{
+    list-style-type: none;
+}  */
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+
+.container{
+    display: grid;
+    width: max-content;
+    position: relative;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto 15vw auto 10vw;
+}
+
+.x-hover:hover::after{
+    content: "X";
+    color: black;
+    opacity: 0.2;
+}
+
+.o-hover:hover::after{
+    content: "O";
+    color: black;
+    opacity: 0.2;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(217,180, 252);
+}
+
+.gameInfo{
+    padding: 0 34px;
+    font-family:'Poppins', sans-serif;
+    padding-top: 20px;
+    /* width: -webkit-fill-available; */
+    justify-content: center;
+}
+
+.gametext{
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+    /* justify-content: space-between; */
+    }
+    
+.info{
+    font-size: 5vw;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: chocolate;
+}
+.hidden{
+    display:none;
+}
+.visible{
+    display: block;
+}
+
+#reset{
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 5px;
+    color: crimson;
+    background-color: aliceblue;
+    margin: 10px;
+}
+
+/* strike */
+.strike{
+    background-color: black;
+    position: absolute;
+}
+
+.strike-row-1{
+ width:100% ; 
+ height: 4px;
+ top:16%;  
+}
+.strike-row-2{
+    width:100% ; 
+    height: 4px;
+    top:49%;  
+}
+.strike-row-3{
+    width:100% ; 
+    height: 4px;
+    top:83%;  
+}
+
+.strike-col-1{
+ width:4px ; 
+ height:100% ;
+ left:18%;  
+}
+.strike-col-2{
+    width:4px ; 
+    height: 100% ;
+    left:49.5%; 
+}
+.strike-col-3{
+ width:4px ; 
+ height: 100% ;
+ left:81%;   
+}
+
+.strike-diag-1{
+    width:90% ; 
+    height: 4px;
+    top: 50%;
+    left:5%; 
+    transform: skewY(45deg); 
+}
+.strike-diag-2{
+    width:90% ; 
+    height: 4px;
+    top: 50%;
+    left:5%; 
+    transform: skewY(-45deg);  
+}
+
+
+.imgbox img {
+    width: 180px;
+    height: 180px;
+    transition: width 1s ease-in-out;
+    
+}
+/* .images {
+    width: 200;
+    transition: width 1s ease-in-out;
+} */
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0; 
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+@media screen and (max-width: 539px){
+    .info {
+        font-size: 8vw;
+        font-family: 'Poppins';
+        font-weight: 600;
+        color: chocolate;
+        padding-left: 10vw;
+    }
+    .imgbox img {
+        width: 160px;
+        height: 150px;
+        transition: width 1s ease-in-out;
+    }
+    .container{
+        margin: auto;
+    }
+}
+@media screen and (min-width: 540px) and (max-width: 768px) {
+   .gameInfo{ display: flex;
+    align-items: center;
+    }
+    .imgbox img {
+        width: 160px;
+        height: 150px;
+        transition: width 1s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 964px){
+    .flexend {
+        display: inline-flex;
+    }
+    .gameContainer {
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .gameInfo{
+        margin-top: 10px; 
+        font-size: 75%;
+        padding-top: 0;
+        
+    }
+    .gametext{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+        margin: auto;
+    }
+}
+@media screen and (min-width: 964px){
+    .gameInfo{
+        margin-top: 10px; 
+        font-size: 75%;
+        padding-top: 0;
+        width: -webkit-fill-available;
+        
+    }
+}

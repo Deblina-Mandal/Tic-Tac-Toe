@@ -1,0 +1,32 @@
+body{
+    background-color: aqua;
+}
+.text{
+    border: 10px solid wheat;
+    background-color: white;
+    border-radius: 10vw;
+    border-width: 10px;
+    margin: 2vw 10vw;
+}
+.img-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vw;
+}
+.icon{
+    width: 15vw;
+}
+
+.tictactoe{
+    width: 0; 
+    transition: width 1s ease-in-out;
+   }
+
+.play{
+    display: flex;
+    justify-content: center;
+}
+.play-button{
+    width: 30vw;
+}
+ 
